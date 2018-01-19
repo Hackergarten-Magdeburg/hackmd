@@ -1,3 +1,7 @@
+// At the top of your webpack config, insert this
+var fs = require('fs');
+var gracefulFs = require('graceful-fs');
+gracefulFs.gracefulify(fs);
 var baseConfig = require('./webpackBaseConfig')
 var ExtractTextPlugin = require('extract-text-webpack-plugin')
 var path = require('path')
